@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>html3</title>
+    <!--添加静态页面-->
+    <link href="../static/pages-cart.css" th:href="@{pages-cart.css}">
+</head>
+<body>
+<!--进行判断-->
+<div th:switch="${menu}">
+    <p th:case="admin">User is an administrator</p>
+    <p th:case="manager">User is an manager</p>
+</div>
+<!--引入片段，三种方式-->
+<!--1.insert-->
+<div th:insert="~{footer :: copy}"></div>
+<!--2.include-->
+<div th:include="~{footer :: copy}"></div>
+<!--3.replace-->
+<div th:replace="~{footer :: copy}"></div>
+
+
+</body>
+</html>

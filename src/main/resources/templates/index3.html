@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>html3</title>
+</head>
+<body>
+<!--给属性标签赋值-->
+<h1 th:text="${name}"></h1><br>
+<!--给属性框赋值-->
+<input type="text" name="names" th:value="${name}"/><br>
+<!--拼接字符串-->
+<span th:text="'欢迎'+${name}+'到来'"></span><br>
+<span th:text="|欢迎${name}到来|"></span><br>
+
+
+</body>
+</html>
